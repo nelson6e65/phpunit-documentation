@@ -3,7 +3,7 @@
   <title>Manual de PHPUnit</title>
 
   <bookinfo>
-    <pubdate>Edición para PHPUnit 4.7. Última ctualización: <?dbtimestamp format="Y-m-d"?>.</pubdate>
+    <pubdate>Edición para PHPUnit 4.7. Última actualización: <?dbtimestamp format="Y-m-d"?>.</pubdate>
 
     <author>
       <firstname>Sebastian</firstname>
