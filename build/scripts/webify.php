@@ -21,6 +21,7 @@ function webify_directory($directory, $language, $version)
 
     $editions  = array(
       'en'    => array('5.0', '4.8', '4.7'),
+      'es'    => array(/*'5.0', '4.8', */'4.7'),
       //'fr'    => array('4.2', '4.1'),
       'ja'    => array('5.0', '4.8', '4.7'),
       'pt_br' => array('5.0', '4.8', '4.7'),
@@ -42,6 +43,11 @@ function webify_directory($directory, $language, $version)
 
             case 'en': {
                 $_languageName = 'English';
+            }
+            break;
+
+            case 'es': {
+                $_languageName = 'Spanish';
             }
             break;
 
@@ -128,6 +134,7 @@ function webify_file($file, $toc, $languageList, $versionList, $language)
     //i18n for title
     $title_text = array(
         'en' => 'PHPUnit Manual',
+        'es' => 'Manual de PHPUnit',
         'zh_cn' => 'PHPUnit 手册',
         'ja' => 'PHPUnit マニュアル',
         'pt_br' => 'Manual PHPUnit',
@@ -142,6 +149,7 @@ function webify_file($file, $toc, $languageList, $versionList, $language)
     // i18n for text on page.
     $prev_text = array(
         'en' => 'Prev',
+        'es' => 'Anterior',
         'zh_cn' => '上一章',
         'ja' => '戻る',
         'pt_br' => 'Anterior',
@@ -149,6 +157,7 @@ function webify_file($file, $toc, $languageList, $versionList, $language)
 
     $next_text = array(
         'en' => 'Next',
+        'es' => 'Siguiente',
         'zh_cn' => '下一章',
         'ja' => '次へ',
         'pt_br' => 'Próximo',
@@ -156,6 +165,7 @@ function webify_file($file, $toc, $languageList, $versionList, $language)
 
     $suggestions_text = array(
         'en' => 'Please <a href="https://github.com/sebastianbergmann/phpunit-documentation/issues">open a ticket</a> on GitHub to suggest improvements to this page. Thanks!',
+        'es' => 'Por favor, <a href="https://github.com/sebastianbergmann/phpunit-documentation/issues">abre una entrada</a> en GitHub para sugerir mejoras en esta página. ¡Gracias!',
         'zh_cn' => '如果对本页有改进建议，请 <a href="https://github.com/sebastianbergmann/phpunit-documentation/issues">在 GitHub 上开启任务单</a>。万分感谢！',
         'ja' => 'このページの改善案を<a href="https://github.com/sebastianbergmann/phpunit-documentation/issues">GitHubで提案</a>してください!',
         'pt_br' => 'Por favor, <a href="https://github.com/sebastianbergmann/phpunit-documentation/issues">abra um chamado</a> no GitHub para sugerir melhorias para esta página. Obrigado!',
