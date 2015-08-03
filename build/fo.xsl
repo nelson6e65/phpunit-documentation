@@ -60,6 +60,21 @@
       <l:gentext key="Index" text=""/>
       <l:gentext key="index" text=""/>
     </l:l10n>
+    <l:l10n language="es">
+      <l:context name="title">
+        <l:template name="example" text="Ejemplo %n: %t"/>
+      </l:context>
+      <l:context name="xref-number-and-title">
+        <l:template name="part" text="Parte %n"/>
+        <l:template name="appendix" text="Apéndice %n"/>
+        <l:template name="chapter" text="Capítulo %n"/>
+        <l:template name="example" text="Ejemplo %n"/>
+        <l:template name="figure" text="Figura %n"/>
+        <l:template name="table" text="Tabla %n"/>
+      </l:context>
+      <l:gentext key="Index" text=""/>
+      <l:gentext key="index" text=""/>
+    </l:l10n>
     <l:l10n language="ja">
       <l:context name="title">
         <l:template name="example" text="例 %n: %t"/>
