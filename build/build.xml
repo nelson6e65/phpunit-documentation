@@ -35,10 +35,21 @@
         </or>
       </condition>
     </fail>
+
+    <property name="book.xml" value="../src/${version}/${language}/book.xml"/>
+
+    <!-- Ensure 'book.xml' resource is available before trying lint with xmllint. -->
+    <fail message="PHPUnit Documentation source files, for language=&quot;${language}&quot; and version=&quot;${version}&quot;, are not available. Source file not found: &quot;${book.xml}&quot;. Check the &quot;language&quot; and &quot;version&quot; values.">
+      <condition>
+        <not><available file="${basedir}/${book.xml}"/></not>
+      </condition>
+    </fail>
+
     <exec dir="${basedir}" executable="xmllint" failonerror="true">
-      <arg line="--noout --noent ../src/${version}/${language}/book.xml"/>
+      <arg line="--noout --noent ${book.xml}"/>
     </exec>
   </target>
+
 
   <target name="build">
     <delete dir="output/${version}/${language}"/>
