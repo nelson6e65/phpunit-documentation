@@ -16,6 +16,25 @@
   <target name="build-current-es" depends="build-es-4.7"/>
 
   <target name="check">
+    <!-- Ensure parameter 'version' is not empty or undefined -->
+    <fail message="&quot;version&quot; property is missing or empty.">
+      <condition>
+        <or>
+          <not><isset property="version"/></not>
+          <length string="${version}" trim="true" length="0" />
+        </or>
+      </condition>
+    </fail>
+
+    <!-- Ensure parameter 'language' is not empty or undefined -->
+    <fail message="&quot;language&quot; property is missing or empty.">
+      <condition>
+        <or>
+          <not><isset property="language"/></not>
+          <length string="${language}" trim="true" length="0" />
+        </or>
+      </condition>
+    </fail>
     <exec dir="${basedir}" executable="xmllint" failonerror="true">
       <arg line="--noout --noent ../src/${version}/${language}/book.xml"/>
     </exec>
